@@ -1,0 +1,67 @@
+:root {
+    /* Design System Colors */
+    --color-primary: #1e40af; /* Blue-700 */
+    --color-success: #10b981; /* Green-500 */
+    --color-warning: #f59e0b; /* Yellow-500 */
+    --color-error: #ef4444; /* Red-500 */
+    --color-background: #f9fafb; /* Gray-50 */
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+}
+/* Custom scrollbar for aesthetic */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+.tag-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    min-height: 44px;
+    background-color: white;
+}
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: #e0f2f1; /* Green-100 */
+    color: #0d9488; /* Teal-600 */
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.tag-remove {
+    margin-left: 6px;
+    cursor: pointer;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    border: 2px solid #9ca3af;
+}
+.timeline-item.active::before {
+    background-color: var(--color-primary);
+    border-color: #60a5fa;
+}
+.timeline-item-line {
+    position: absolute;
+    left: 4px;
+    top: 16px;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e7eb;
+}
